@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const fetchUser = require("../Middleware/fetchUser")
 const jwt = require("jsonwebtoken");
 require('dotenv').config()
-const jwtSK = process.env.SECRET_KEY;
+const jwtSK = process.env.jwtSK;
 const saltRounds = 10;
 
 const router = express.Router();

@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 require('dotenv').config()
-// const db_link = `${process.env.MONGO_LINK}`;
+
+const db_link = `mongodb+srv://${process.env.MongoUser}:${process.env.MongoPassword}@inotebook.xzmvr.mongodb.net/`;
 connectToMongo = ()=>{
-    mongoose.connect("mongodb+srv://amansinghbhagat2:ro3hxQrroq4Pol9R@inotebook.xzmvr.mongodb.net/").then(()=>{
+    mongoose.connect(db_link).then(()=>{
         console.log("Connected");
     }).catch((err)=>{
         console.log(err);
