@@ -10,6 +10,7 @@ connectToMongo();
 port = process.env.Port;
 const app = express()
 app.use(cors());
+app.options('*', cors());
 app.listen(port,()=>{
     console.log(`App listening on port localhost:${port}`);
 });
